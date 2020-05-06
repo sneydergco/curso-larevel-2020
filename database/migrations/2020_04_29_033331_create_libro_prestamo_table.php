@@ -13,7 +13,7 @@ class CreateLibroPrestamoTable extends Migration
      */
     public function up()
     {
-        Schema::create('libro_prestamos_adsi', function (Blueprint $table) {
+        Schema::create('libro_prestamo', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('usuario_id');
             $table->foreign('usuario_id', 'fk_libroprestamo_usuario')->references('id')->on('usuario')->onDelete('restrict')->onUpdate('restrict');
